@@ -9,8 +9,8 @@
     "type": "flarum-extension",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/tagecode/donate/issues",
-        "source": "https://github.com/tagecode/donate",
+        "issues": "https://github.com/tagecode/flarum-donate/issues",
+        "source": "https://github.com/tagecode/flarum-donate",
         "forum": "https://discuss.flarum.org"
     },
     "homepage": "https://flarum.org",
