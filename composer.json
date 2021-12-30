@@ -1,0 +1,66 @@
+{
+    "name": "tagecode/flarum-donate",
+    "description": "This is a flarum extension to add user donate link in profile page.",
+    "keywords": [
+        "flarum",
+        "flarum extension",
+        "donate"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/tagecode/donate/issues",
+        "source": "https://github.com/tagecode/donate",
+        "forum": "https://discuss.flarum.org"
+    },
+    "homepage": "https://flarum.org",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "tagecode",
+            "email": "tagecode@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TageCode\\Donate\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TageCode\\Donate\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Donate",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-donate",
+                "backgroundColor": "#fff",
+                "color": "#4c6ef5"
+            }
+        }
+    },
+    "scripts": {
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:unit": "Runs all unit tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
+    }
+}
