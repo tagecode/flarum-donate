@@ -5,10 +5,18 @@ namespace TageCode\Donate\Listeners;
 use Flarum\Foundation\ValidationException;
 use Flarum\User\Event\Saving;
 use Flarum\User\Exception\PermissionDeniedException;
+use Illuminate\Contracts\Validation\Factory;
 use Illuminate\Support\Arr;
 
 class SaveUserDonateAttribute
 {
+    private $validator;
+
+    public function __construct(Factory $validator)
+    {
+        $this->validator = $validator;
+    }
+
     /**
      * @param Saving $event
      *
@@ -34,6 +42,13 @@ class SaveUserDonateAttribute
                 if (!filter_var($attributes['donate'],
                     FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED)) {
                     throw new ValidationException(['message' => 'Donate must be a complete url link.']);
+                }
+
+                $validator = $this->validator->make($attributes, [
+                    'donate' => 'required|max:255'
+                ]);
+                if ($validator->fails()) {
+                    throw new ValidationException(['message' => $validator->errors()->first()]);
                 }
             }
 
