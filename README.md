@@ -36,6 +36,13 @@ php flarum cache:clear
 - [GitHub](https://github.com/tagecode/flarum-donate)
 - [Discuss](https://discuss.flarum.org)
 
+## FAQ
+
+If the value is set normally, it will be displayed according to the situation.
+
+1. When not logged in, the link will be displayed when the valid value is set normally.
+2. After logging in, the current login person’s own link is **not displayed** on his own information page, and the values set by other people are displayed normally.
+
 ## Reference
 
 - [flarum-add-web3-address-to-user-profile](https://www.sitepoint.com/flarum-add-web3-address-to-user-profile/)
