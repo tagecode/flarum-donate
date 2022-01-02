@@ -30,6 +30,22 @@ php flarum migrate
 php flarum cache:clear
 ```
 
+## Preview
+
+Mainly in these three places, personal homepage, user card page and edit user information page.
+
+![1](https://raw.githubusercontent.com/tagecode/assets/main/mark-down-images/flarum-donate-1.png)
+
+
+
+![2](https://raw.githubusercontent.com/tagecode/assets/main/mark-down-images/flarum-donate-2.png)
+
+
+
+![3](https://raw.githubusercontent.com/tagecode/assets/main/mark-down-images/flarum-donate-3.png)
+
+
+
 ## Links
 
 - [Packagist](https://packagist.org/packages/tagecode/flarum-donate)
