@@ -56,8 +56,8 @@ Mainly in these three places, personal homepage, user card page and edit user in
 
 If the value is set normally, it will be displayed according to the situation.
 
-1. When not logged in, the link will be displayed when the valid value is set normally.
-2. After logging in, the current login person’s own link is **not displayed** on his own information page, and the values set by other people are displayed normally.
+1. When not logged in, the link will be displayed.
+2. After logging in, the current login person’s own link is **not displayed** on his own information page, and the values set by other people are displayed.
 
 ## Reference
 
